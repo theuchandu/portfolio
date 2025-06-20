@@ -72,9 +72,18 @@ function App() {
         <div className="nav-container">
           <div className="nav-logo">
             <div className="logo-icon">
-              <span className="logo-text">C</span>
+              <div className="logo-symbol">
+                <span className="logo-letter">C</span>
+                <div className="logo-code">
+                  <span className="code-line">dev</span>
+                </div>
+              </div>
+              <div className="logo-glow"></div>
             </div>
-            <span className="logo-name">Chandu</span>
+            <div className="logo-text">
+              <span className="logo-name">Chandu</span>
+              <span className="logo-title">Full Stack Dev</span>
+            </div>
           </div>
           
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -91,6 +100,13 @@ function App() {
             >
               <span className="nav-icon">👨‍💻</span>
               <span className="nav-text">About</span>
+            </a>
+            <a 
+              className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}
+              onClick={() => scrollToSection('experience')}
+            >
+              <span className="nav-icon">💼</span>
+              <span className="nav-text">Experience</span>
             </a>
             <a 
               className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
@@ -302,54 +318,365 @@ function App() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section id="experience" className="experience">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Work Experience</h2>
+            <div className="section-subtitle">My professional journey</div>
+          </div>
+          
+          <div className="experience-timeline">
+            <div className="timeline-item">
+              <div className="timeline-marker">
+                <div className="marker-dot"></div>
+                <div className="marker-line"></div>
+              </div>
+              <div className="timeline-content">
+                <div className="experience-card">
+                  <div className="experience-header">
+                    <div className="company-info">
+                      <h3 className="company-name">Full Stack Developer</h3>
+                      <p className="company-location">Remote / Freelance</p>
+                    </div>
+                    <div className="experience-duration">
+                      <span className="duration">2022 - Present</span>
+                      <span className="duration-badge">2+ years</span>
+                    </div>
+                  </div>
+                  <div className="role-info">
+                    <h4 className="job-title">PHP Full Stack Developer</h4>
+                    <p className="job-description">
+                      Specialized in Laravel-based web applications with expertise in payment gateway integrations, 
+                      real-time tracking systems, and comprehensive resort management solutions. 
+                      Developed secure, scalable applications using modern web technologies.
+                    </p>
+                  </div>
+                  <div className="projects-worked">
+                    <h5 className="projects-title">Key Projects:</h5>
+                    <div className="project-list">
+                      <div className="project-item">
+                        <span className="project-name">Plot Management System</span>
+                        <span className="project-tech">Laravel, MySQL, JavaScript</span>
+                      </div>
+                      <div className="project-item">
+                        <span className="project-name">Location-Based HR System</span>
+                        <span className="project-tech">Laravel, REST APIs, jQuery</span>
+                      </div>
+                      <div className="project-item">
+                        <span className="project-name">Resort Management Solution</span>
+                        <span className="project-tech">Laravel, Bootstrap, Payment APIs</span>
+                      </div>
+                      <div className="project-item">
+                        <span className="project-name">Resort Website</span>
+                        <span className="project-tech">HTML, CSS, Bootstrap, SEO</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievements">
+                    <h5 className="achievements-title">Key Achievements:</h5>
+                    <ul className="achievements-list">
+                      <li>Developed EMI tracking and payment history modules with secure architecture</li>
+                      <li>Implemented associate hierarchy system for referral and commission tracking</li>
+                      <li>Built real-time location-based employee tracking and attendance system</li>
+                      <li>Integrated multiple payment gateways (PhonePe, Razorpay, ICICI)</li>
+                      <li>Created responsive, SEO-friendly websites with admin dashboards</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker">
+                <div className="marker-dot"></div>
+                <div className="marker-line"></div>
+              </div>
+              <div className="timeline-content">
+                <div className="experience-card">
+                  <div className="experience-header">
+                    <div className="company-info">
+                      <h3 className="company-name">Web Development Projects</h3>
+                      <p className="company-location">Freelance & Personal</p>
+                    </div>
+                    <div className="experience-duration">
+                      <span className="duration">2021 - 2022</span>
+                      <span className="duration-badge">1 year</span>
+                    </div>
+                  </div>
+                  <div className="role-info">
+                    <h4 className="job-title">Full Stack Developer</h4>
+                    <p className="job-description">
+                      Worked on various web development projects, gaining expertise in PHP, Laravel framework, 
+                      and frontend technologies. Developed custom solutions for different business requirements 
+                      and learned payment gateway integrations.
+                    </p>
+                  </div>
+                  <div className="projects-worked">
+                    <h5 className="projects-title">Key Projects:</h5>
+                    <div className="project-list">
+                      <div className="project-item">
+                        <span className="project-name">E-Commerce Platforms</span>
+                        <span className="project-tech">PHP, MySQL, jQuery</span>
+                      </div>
+                      <div className="project-item">
+                        <span className="project-name">Content Management Systems</span>
+                        <span className="project-tech">Laravel, Bootstrap, HTML/CSS</span>
+                      </div>
+                      <div className="project-item">
+                        <span className="project-name">Business Websites</span>
+                        <span className="project-tech">PHP, JavaScript, Responsive Design</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievements">
+                    <h5 className="achievements-title">Key Achievements:</h5>
+                    <ul className="achievements-list">
+                      <li>Mastered Laravel MVC architecture and best practices</li>
+                      <li>Developed expertise in database design and optimization</li>
+                      <li>Gained experience in payment gateway integrations</li>
+                      <li>Built responsive and user-friendly web interfaces</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker">
+                <div className="marker-dot"></div>
+              </div>
+              <div className="timeline-content">
+                <div className="experience-card">
+                  <div className="experience-header">
+                    <div className="company-info">
+                      <h3 className="company-name">Freelance Projects</h3>
+                      <p className="company-location">Remote</p>
+                    </div>
+                    <div className="experience-duration">
+                      <span className="duration">2021 - 2022</span>
+                      <span className="duration-badge">1 year</span>
+                    </div>
+                  </div>
+                  <div className="role-info">
+                    <h4 className="job-title">Full Stack Developer</h4>
+                    <p className="job-description">
+                      Worked on various freelance projects, developing custom web solutions 
+                      for clients across different industries. Managed projects independently 
+                      from requirements gathering to deployment.
+                    </p>
+                  </div>
+                  <div className="projects-worked">
+                    <h5 className="projects-title">Key Projects:</h5>
+                    <div className="project-list">
+                      <div className="project-item">
+                        <span className="project-name">Restaurant Management System</span>
+                        <span className="project-tech">PHP, MySQL, HTML/CSS</span>
+                      </div>
+                      <div className="project-item">
+                        <span className="project-name">Real Estate Website</span>
+                        <span className="project-tech">PHP, JavaScript, Bootstrap</span>
+                      </div>
+                      <div className="project-item">
+                        <span className="project-name">Task Management App</span>
+                        <span className="project-tech">PHP, AJAX, jQuery</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="achievements">
+                    <h5 className="achievements-title">Key Achievements:</h5>
+                    <ul className="achievements-list">
+                      <li>Completed 10+ successful freelance projects</li>
+                      <li>Maintained 100% client satisfaction rate</li>
+                      <li>Developed expertise in multiple technologies</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Experience Summary */}
+          <div className="experience-summary">
+            <div className="summary-stats">
+              <div className="stat-card">
+                <div className="stat-icon">💻</div>
+                <div className="stat-content">
+                  <h4>Full Stack</h4>
+                  <p>PHP, Laravel, JavaScript, MySQL</p>
+                </div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-icon">🎨</div>
+                <div className="stat-content">
+                  <h4>Frontend</h4>
+                  <p>HTML, CSS, Bootstrap, jQuery</p>
+                </div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-icon">🔌</div>
+                <div className="stat-content">
+                  <h4>APIs & Integrations</h4>
+                  <p>REST APIs, Payment Gateways</p>
+                </div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-icon">📊</div>
+                <div className="stat-content">
+                  <h4>Projects Delivered</h4>
+                  <p>10+ successful applications</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tech Stack Section */}
+          <div className="tech-stack-section">
+            <div className="section-header">
+              <h3 className="section-title">Technologies & Tools</h3>
+              <div className="section-subtitle">My technical expertise</div>
+            </div>
+            <div className="tech-grid">
+              <div className="tech-category">
+                <h4 className="tech-category-title">Backend Development</h4>
+                <div className="tech-items">
+                  <span className="tech-item">PHP</span>
+                  <span className="tech-item">Laravel</span>
+                  <span className="tech-item">MySQL</span>
+                  <span className="tech-item">REST APIs</span>
+                </div>
+              </div>
+              <div className="tech-category">
+                <h4 className="tech-category-title">Frontend Development</h4>
+                <div className="tech-items">
+                  <span className="tech-item">HTML5</span>
+                  <span className="tech-item">CSS3</span>
+                  <span className="tech-item">JavaScript</span>
+                  <span className="tech-item">jQuery</span>
+                  <span className="tech-item">Bootstrap</span>
+                </div>
+              </div>
+              <div className="tech-category">
+                <h4 className="tech-category-title">Payment & Integrations</h4>
+                <div className="tech-items">
+                  <span className="tech-item">PhonePe</span>
+                  <span className="tech-item">Razorpay</span>
+                  <span className="tech-item">ICICI Gateway</span>
+                  <span className="tech-item">SMS/Email APIs</span>
+                </div>
+              </div>
+              <div className="tech-category">
+                <h4 className="tech-category-title">Development Tools</h4>
+                <div className="tech-items">
+                  <span className="tech-item">Git</span>
+                  <span className="tech-item">Composer</span>
+                  <span className="tech-item">npm</span>
+                  <span className="tech-item">VS Code</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section id="skills" className="skills">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Skills & Expertise</h2>
-            <div className="section-subtitle">Technologies I work with</div>
+            {/* <div className="section-subtitle">Technologies I work with</div> */}
           </div>
+          
+         
           <div className="skills-container">
             <div className="skill-category">
               <div className="category-header">
-                <span className="category-icon">🔧</span>
+                <div className="category-icon-wrapper">
+                  <span className="category-icon">🔧</span>
+                  <div className="icon-glow"></div>
+                </div>
                 <h3>Backend Development</h3>
+                <div className="category-progress">
+                  <div className="progress-bar">
+                    <div className="progress-fill" style={{width: '88%'}}></div>
+                  </div>
+                  <span className="progress-text">88%</span>
+                </div>
               </div>
               <div className="skills-grid">
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">PHP</span>
-                    <span className="skill-level">90%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">🐘</div>
+                    <div className="skill-info">
+                      <span className="skill-name">PHP</span>
+                      <span className="skill-level">90%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '90%'}}></div>
+                    <div className="skill-progress" style={{width: '90%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">2+ years</span>
+                    <span className="skill-projects">15+ projects</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">Laravel</span>
-                    <span className="skill-level">85%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">⚡</div>
+                    <div className="skill-info">
+                      <span className="skill-name">Laravel</span>
+                      <span className="skill-level">85%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '85%'}}></div>
+                    <div className="skill-progress" style={{width: '85%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1.5+ years</span>
+                    <span className="skill-projects">12+ projects</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">MySQL</span>
-                    <span className="skill-level">80%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">🗄️</div>
+                    <div className="skill-info">
+                      <span className="skill-name">MySQL</span>
+                      <span className="skill-level">80%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '80%'}}></div>
+                    <div className="skill-progress" style={{width: '80%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">2+ years</span>
+                    <span className="skill-projects">20+ databases</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">REST APIs</span>
-                    <span className="skill-level">85%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">🔌</div>
+                    <div className="skill-info">
+                      <span className="skill-name">REST APIs</span>
+                      <span className="skill-level">85%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '85%'}}></div>
+                    <div className="skill-progress" style={{width: '85%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1.5+ years</span>
+                    <span className="skill-projects">25+ APIs</span>
                   </div>
                 </div>
               </div>
@@ -357,44 +684,92 @@ function App() {
 
             <div className="skill-category">
               <div className="category-header">
-                <span className="category-icon">🎨</span>
+                <div className="category-icon-wrapper">
+                  <span className="category-icon">🎨</span>
+                  <div className="icon-glow"></div>
+                </div>
                 <h3>Frontend Development</h3>
+                <div className="category-progress">
+                  <div className="progress-bar">
+                    <div className="progress-fill" style={{width: '82%'}}></div>
+                  </div>
+                  <span className="progress-text">82%</span>
+                </div>
               </div>
               <div className="skills-grid">
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">HTML/CSS</span>
-                    <span className="skill-level">90%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">🌐</div>
+                    <div className="skill-info">
+                      <span className="skill-name">HTML/CSS</span>
+                      <span className="skill-level">90%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '90%'}}></div>
+                    <div className="skill-progress" style={{width: '90%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">2+ years</span>
+                    <span className="skill-projects">30+ websites</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">JavaScript</span>
-                    <span className="skill-level">80%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">⚡</div>
+                    <div className="skill-info">
+                      <span className="skill-name">JavaScript</span>
+                      <span className="skill-level">80%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '80%'}}></div>
+                    <div className="skill-progress" style={{width: '80%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1.5+ years</span>
+                    <span className="skill-projects">18+ projects</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">React</span>
-                    <span className="skill-level">75%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">⚛️</div>
+                    <div className="skill-info">
+                      <span className="skill-name">React</span>
+                      <span className="skill-level">75%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '75%'}}></div>
+                    <div className="skill-progress" style={{width: '75%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1+ year</span>
+                    <span className="skill-projects">8+ projects</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">Bootstrap</span>
-                    <span className="skill-level">85%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">🎯</div>
+                    <div className="skill-info">
+                      <span className="skill-name">Bootstrap</span>
+                      <span className="skill-level">85%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '85%'}}></div>
+                    <div className="skill-progress" style={{width: '85%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1.5+ years</span>
+                    <span className="skill-projects">22+ projects</span>
                   </div>
                 </div>
               </div>
@@ -402,47 +777,114 @@ function App() {
 
             <div className="skill-category">
               <div className="category-header">
-                <span className="category-icon">🛠️</span>
+                <div className="category-icon-wrapper">
+                  <span className="category-icon">🛠️</span>
+                  <div className="icon-glow"></div>
+                </div>
                 <h3>Tools & Others</h3>
+                <div className="category-progress">
+                  <div className="progress-bar">
+                    <div className="progress-fill" style={{width: '72%'}}></div>
+                  </div>
+                  <span className="progress-text">72%</span>
+                </div>
               </div>
               <div className="skills-grid">
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">Git</span>
-                    <span className="skill-level">80%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">📝</div>
+                    <div className="skill-info">
+                      <span className="skill-name">Git</span>
+                      <span className="skill-level">80%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '80%'}}></div>
+                    <div className="skill-progress" style={{width: '80%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">2+ years</span>
+                    <span className="skill-projects">50+ repos</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">Docker</span>
-                    <span className="skill-level">70%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">🐳</div>
+                    <div className="skill-info">
+                      <span className="skill-name">Docker</span>
+                      <span className="skill-level">70%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '70%'}}></div>
+                    <div className="skill-progress" style={{width: '70%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1+ year</span>
+                    <span className="skill-projects">10+ containers</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">AWS</span>
-                    <span className="skill-level">65%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">☁️</div>
+                    <div className="skill-info">
+                      <span className="skill-name">AWS</span>
+                      <span className="skill-level">65%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '65%'}}></div>
+                    <div className="skill-progress" style={{width: '65%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1+ year</span>
+                    <span className="skill-projects">5+ deployments</span>
                   </div>
                 </div>
+                
                 <div className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">Linux</span>
-                    <span className="skill-level">75%</span>
+                  <div className="skill-header">
+                    <div className="skill-icon">🐧</div>
+                    <div className="skill-info">
+                      <span className="skill-name">Linux</span>
+                      <span className="skill-level">75%</span>
+                    </div>
                   </div>
                   <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '75%'}}></div>
+                    <div className="skill-progress" style={{width: '75%'}}>
+                      <div className="progress-glow"></div>
+                    </div>
+                  </div>
+                  <div className="skill-details">
+                    <span className="skill-experience">1.5+ years</span>
+                    <span className="skill-projects">15+ servers</span>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Skills Summary */}
+          <div className="skills-summary">
+            <div className="summary-card">
+              <div className="summary-icon">🚀</div>
+              <h4>Fast Learner</h4>
+              <p>Quickly adapt to new technologies and frameworks</p>
+            </div>
+            <div className="summary-card">
+              <div className="summary-icon">🔧</div>
+              <h4>Problem Solver</h4>
+              <p>Efficiently debug and resolve complex technical issues</p>
+            </div>
+            <div className="summary-card">
+              <div className="summary-icon">👥</div>
+              <h4>Team Player</h4>
+              <p>Collaborate effectively in agile development teams</p>
             </div>
           </div>
         </div>
@@ -577,14 +1019,14 @@ function App() {
                   <div className="contact-icon">📧</div>
                   <div>
                     <h4>Email</h4>
-                    <p>chandu@example.com</p>
+                    <p>rajchanduu@gmail.com</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <div className="contact-icon">📱</div>
                   <div>
                     <h4>Phone</h4>
-                    <p>+91 98765 43210</p>
+                    <p>+91 91827 82130</p>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -596,11 +1038,11 @@ function App() {
                 </div>
               </div>
               <div className="social-links">
-                <a href="#" className="social-link">
+                <a href="https://github.com/theuchandu" className="social-link">
                   <span className="social-icon">🐙</span>
                   <span>GitHub</span>
                 </a>
-                <a href="#" className="social-link">
+                <a href="https://www.linkedin.com/in/godishala-chandu-8a933a16a/" className="social-link">
                   <span className="social-icon">💼</span>
                   <span>LinkedIn</span>
                 </a>
@@ -642,10 +1084,7 @@ function App() {
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
-            <div className="footer-logo">
-              <span className="logo-text">C</span>
-              <span>Chandu</span>
-            </div>
+            
             <p className="footer-text">
               Crafting digital experiences with passion and precision
             </p>
