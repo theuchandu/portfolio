@@ -140,7 +140,7 @@ function App() {
               <span className="title-line">👋</span>
             </h1>
             <h2 className="hero-subtitle">
-              <span className="subtitle-text">PHP Full Stack Developer</span>
+              <span className="subtitle-text">Full Stack Developer</span>
               <span className="subtitle-emoji">💻</span>
             </h2>
             <p className="hero-description">
