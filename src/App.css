@@ -12,8 +12,8 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #1a1a1a;
-  background: #0a0a0a;
+  color: #fff;
+  background: #000;
   overflow-x: hidden;
 }
 
@@ -36,7 +36,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: #000;
 }
 
 .floating-shapes {
@@ -126,9 +126,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(10, 10, 10, 0.8);
+  background: #000;
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #222;
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -261,7 +261,7 @@ body {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -278,7 +278,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: none;
   transition: left 0.3s ease;
   z-index: -1;
 }
@@ -290,7 +290,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: white;
+  color: #fff;
   transform: translateY(-2px);
 }
 
@@ -477,7 +477,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: none;
   transition: left 0.3s ease;
   z-index: -1;
 }
@@ -487,8 +487,8 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
+  background: #fff;
+  color: #000;
 }
 
 .btn-primary:hover {
@@ -497,14 +497,14 @@ body {
 }
 
 .btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .btn-secondary:hover {
-  border-color: #667eea;
-  transform: translateY(-3px);
+  background: #222;
+  color: #fff;
 }
 
 .btn-icon {
@@ -673,10 +673,10 @@ section {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
 }
 
 .section-subtitle {
@@ -951,7 +951,7 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  background: none;
   transition: left 0.6s ease;
 }
 
@@ -1045,7 +1045,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: none;
   animation: shimmer 2s infinite;
 }
 
@@ -1158,7 +1158,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: none;
   animation: shimmer 2s infinite;
 }
 
@@ -1214,7 +1214,7 @@ section {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: none;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -1550,8 +1550,8 @@ section {
   margin-top: 1.5rem;
   font-weight: 600;
   border-radius: 12px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
+  background: #fff;
+  color: #000;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1564,7 +1564,7 @@ section {
 .contact-form .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
-  background: linear-gradient(135deg, #5a6fd8, #6a4190);
+  background: #ccc;
 }
 
 /* Footer */
@@ -1759,7 +1759,7 @@ section {
 /* Experience Section */
 .experience {
   padding: 100px 0;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #181824 0%, #232946 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1830,9 +1830,9 @@ section {
 .marker-dot {
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  background: linear-gradient(135deg, #ffd700, #a259f7);
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+  box-shadow: none;
   animation: pulse 2s infinite;
 }
 
@@ -1840,7 +1840,7 @@ section {
   position: absolute;
   width: 2px;
   height: 100px;
-  background: linear-gradient(180deg, #4f46e5, transparent);
+  background: linear-gradient(180deg, #a259f7, transparent);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1853,12 +1853,12 @@ section {
 
 /* Experience Cards */
 .experience-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(36, 37, 42, 0.85);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1.5px solid #a259f7;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1871,13 +1871,13 @@ section {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899);
+  background: linear-gradient(90deg, #3a86ff, #ffd700);
   border-radius: 20px 20px 0 0;
 }
 
 .experience-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: none;
   border-color: rgba(79, 70, 229, 0.3);
 }
 
@@ -1895,14 +1895,14 @@ section {
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0 5px 0;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
 }
 
 .company-location {
-  color: #a1a1aa;
+  color: #b8b8b8;
   font-size: 0.9rem;
   margin: 0;
   display: flex;
@@ -1929,13 +1929,13 @@ section {
 
 .duration-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: white;
+  background: #fff;
+  color: #000;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+  box-shadow: none;
 }
 
 .role-info {
@@ -1950,7 +1950,7 @@ section {
 }
 
 .job-description {
-  color: #a1a1aa;
+  color: #b8b8b8;
   line-height: 1.6;
   margin: 0;
 }
@@ -2005,7 +2005,7 @@ section {
 }
 
 .project-tech {
-  color: #a1a1aa;
+  color: #b8b8b8;
   font-size: 0.8rem;
   background: rgba(79, 70, 229, 0.2);
   padding: 4px 8px;
@@ -2038,7 +2038,7 @@ section {
 }
 
 .achievements-list li {
-  color: #a1a1aa;
+  color: #b8b8b8;
   font-size: 0.9rem;
   line-height: 1.5;
   padding-left: 20px;
@@ -2068,9 +2068,9 @@ section {
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(36, 37, 42, 0.85);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1.5px solid #a259f7;
   border-radius: 15px;
   padding: 25px;
   display: flex;
@@ -2088,7 +2088,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+  background: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -2122,7 +2122,7 @@ section {
 }
 
 .stat-content p {
-  color: #a1a1aa;
+  color: #b8b8b8;
   font-size: 0.9rem;
   margin: 0;
 }
@@ -2195,10 +2195,10 @@ section {
 /* Animations */
 @keyframes pulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+    box-shadow: none;
   }
   50% {
-    box-shadow: 0 0 30px rgba(79, 70, 229, 0.8);
+    box-shadow: none;
   }
 }
 
@@ -2251,7 +2251,7 @@ section {
 }
 
 .tech-category {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(36, 37, 42, 0.85);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
@@ -2268,14 +2268,14 @@ section {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899);
+  background: none;
   border-radius: 15px 15px 0 0;
 }
 
 .tech-category:hover {
   transform: translateY(-5px);
   border-color: rgba(79, 70, 229, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
 }
 
 .tech-category-title {
@@ -2300,8 +2300,8 @@ section {
 }
 
 .tech-item {
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(124, 58, 237, 0.2));
-  color: #e4e4e7;
+  background: linear-gradient(135deg, #232946 60%, #a259f7 100%);
+  color: #fff;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -2312,10 +2312,8 @@ section {
 }
 
 .tech-item:hover {
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.3), rgba(124, 58, 237, 0.3));
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
-  color: #fff;
+  background: linear-gradient(135deg, #ffd700 60%, #a259f7 100%);
+  color: #232946;
 }
 
 /* Responsive Design for Tech Stack */
@@ -2360,3 +2358,115 @@ section {
 .tech-grid .tech-category:nth-child(2) { animation-delay: 0.2s; }
 .tech-grid .tech-category:nth-child(3) { animation-delay: 0.3s; }
 .tech-grid .tech-category:nth-child(4) { animation-delay: 0.4s; }
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+body,
+.animated-bg,
+.experience,
+.skills,
+.projects,
+.contact {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.container,
+.experience .container,
+.skills .container,
+.projects .container,
+.contact .container {
+  background: transparent !important;
+}
+
+.experience-card, .stat-card, .tech-category, .skill-category, .project-card, .contact-card, .contact-form {
+  background: #111 !important;
+  border: 1px solid #222 !important;
+  box-shadow: none !important;
+}
+
+.experience-card::before, .tech-category::before, .skill-category::before, .project-card::before {
+  background: #222 !important;
+}
+
+.company-info h3, .projects-title, .achievements-title, .tech-category-title, .section-title {
+  background: none !important;
+  color: #fff !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+.company-location, .job-description, .project-tech, .achievements-list li, .stat-content p, .tech-item {
+  color: #ccc !important;
+}
+
+.duration-badge {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.marker-dot, .marker-line {
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+.btn-primary, .contact-form .btn {
+  background: #fff !important;
+  color: #000 !important;
+  border: none !important;
+}
+
+.btn-primary:hover, .contact-form .btn:hover {
+  background: #ccc !important;
+  color: #000 !important;
+}
+
+.btn-secondary {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.btn-secondary:hover {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+.tech-item {
+  background: #222 !important;
+  border: 1px solid #333 !important;
+  color: #fff !important;
+}
+
+.tech-item:hover {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+.navbar {
+  background: #000 !important;
+  border-bottom: 1px solid #222 !important;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: #fff !important;
+}
+
+.nav-link::before, .btn::before {
+  background: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222 !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #000 !important;
+}

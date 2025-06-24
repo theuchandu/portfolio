@@ -497,7 +497,7 @@ function App() {
           </div>
 
           {/* Experience Summary */}
-          <div className="experience-summary">
+          {/* <div className="experience-summary">
             <div className="summary-stats">
               <div className="stat-card">
                 <div className="stat-icon">💻</div>
@@ -528,7 +528,7 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Tech Stack Section */}
           <div className="tech-stack-section">
