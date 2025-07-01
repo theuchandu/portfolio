@@ -403,20 +403,18 @@ function App() {
                 <div className="experience-card">
                   <div className="experience-header">
                     <div className="company-info">
-                      <h3 className="company-name">Full1111111111 Stack Developer</h3>
-                      <p className="company-location">Remote / Freelance</p>
+                      <h3 className="company-name">Full Stack Developer</h3>
+                      <p className="company-location">
+                        <a href='https://usmsystems.com/'>Usm Business Systems</a></p>
                     </div>
                     <div className="experience-duration">
                       <span className="duration">2022 - Present</span>
                       <span className="duration-badge">2+ years</span>
                     </div>
                   </div>
-                  <div className="role-info">
-                    <h4 className="job-title">PHP Full Stack Developer</h4>
+                  <div className="role-info">                    
                     <p className="job-description">
-                      Specialized in Laravel-based web applications with expertise in payment gateway integrations, 
-                      real-time tracking systems, and comprehensive resort management solutions. 
-                      Developed secure, scalable applications using modern web technologies.
+                    Specialized in developing Laravel-based web applications with strong expertise in building secure and scalable systems. Experienced in payment gateway integrations, real-time location tracking, and end-to-end resort management platforms. Proficient in full-stack development using PHP, MySQL, JavaScript, HTML/CSS, and RESTful API design. Skilled in creating responsive UIs, managing user roles, and ensuring performance optimization across complex modules. Dedicated to delivering clean, maintainable code with a focus on real-world usability and client satisfaction.  
                     </p>
                   </div>
                   <div className="projects-worked">

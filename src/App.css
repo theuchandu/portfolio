@@ -1951,7 +1951,8 @@ section {
 
 .job-description {
   color: #b8b8b8;
-  line-height: 1.6;
+  line-height: 1.5;
+  padding-right: 2%;
   margin: 0;
 }
 
