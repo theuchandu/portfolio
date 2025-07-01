@@ -1,10 +1,20 @@
 import { useState, useEffect } from 'react'
+import emailjs from 'emailjs-com'
 import './App.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState(false)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +54,63 @@ function App() {
     }
     setIsMenuOpen(false)
   }
+
+  const handleFormChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
+  const validateForm = () => {
+    if (!form.name.trim() || !form.email.trim() || !form.subject.trim() || !form.message.trim()) {
+      setError('All fields are required.');
+      return false;
+    }
+    if (form.name.trim().length < 2) {
+      setError('Name must be at least 2 characters.');
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      setError('Please enter a valid email address.');
+      return false;
+    }
+    if (form.subject.trim().length < 3) {
+      setError('Subject must be at least 3 characters.');
+      return false;
+    }
+    if (form.message.trim().length < 10) {
+      setError('Message must be at least 10 characters.');
+      return false;
+    }
+    setError('');
+    return true;
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+    setSending(true);
+    setError('');
+    setSent(false);
+    try {
+      await emailjs.send(
+        'service_kwzmq4k',
+        'template_htv0vtq',
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message
+        },
+        'Elb4D2maUFOPe6l5Q'
+      );
+      setSent(true);
+      setForm({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <div className="App">
@@ -336,7 +403,7 @@ function App() {
                 <div className="experience-card">
                   <div className="experience-header">
                     <div className="company-info">
-                      <h3 className="company-name">Full Stack Developer</h3>
+                      <h3 className="company-name">Full1111111111 Stack Developer</h3>
                       <p className="company-location">Remote / Freelance</p>
                     </div>
                     <div className="experience-duration">
@@ -364,7 +431,7 @@ function App() {
                         <span className="project-tech">Laravel, REST APIs, jQuery</span>
                       </div>
                       <div className="project-item">
-                        <span className="project-name">Resort Management Solution</span>
+                        <span className="project-name">Resort Management Application</span>
                         <span className="project-tech">Laravel, Bootstrap, Payment APIs</span>
                       </div>
                       <div className="project-item">
@@ -381,6 +448,7 @@ function App() {
                       <li>Built real-time location-based employee tracking and attendance system</li>
                       <li>Integrated multiple payment gateways (PhonePe, Razorpay, ICICI)</li>
                       <li>Created responsive, SEO-friendly websites with admin dashboards</li>
+                      <li>Hotel booking and reservation system, room availibity Calender</li>
                     </ul>
                   </div>
                 </div>
@@ -392,109 +460,10 @@ function App() {
                 <div className="marker-dot"></div>
                 <div className="marker-line"></div>
               </div>
-              <div className="timeline-content">
-                <div className="experience-card">
-                  <div className="experience-header">
-                    <div className="company-info">
-                      <h3 className="company-name">Web Development Projects</h3>
-                      <p className="company-location">Freelance & Personal</p>
-                    </div>
-                    <div className="experience-duration">
-                      <span className="duration">2021 - 2022</span>
-                      <span className="duration-badge">1 year</span>
-                    </div>
-                  </div>
-                  <div className="role-info">
-                    <h4 className="job-title">Full Stack Developer</h4>
-                    <p className="job-description">
-                      Worked on various web development projects, gaining expertise in PHP, Laravel framework, 
-                      and frontend technologies. Developed custom solutions for different business requirements 
-                      and learned payment gateway integrations.
-                    </p>
-                  </div>
-                  <div className="projects-worked">
-                    <h5 className="projects-title">Key Projects:</h5>
-                    <div className="project-list">
-                      <div className="project-item">
-                        <span className="project-name">E-Commerce Platforms</span>
-                        <span className="project-tech">PHP, MySQL, jQuery</span>
-                      </div>
-                      <div className="project-item">
-                        <span className="project-name">Content Management Systems</span>
-                        <span className="project-tech">Laravel, Bootstrap, HTML/CSS</span>
-                      </div>
-                      <div className="project-item">
-                        <span className="project-name">Business Websites</span>
-                        <span className="project-tech">PHP, JavaScript, Responsive Design</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="achievements">
-                    <h5 className="achievements-title">Key Achievements:</h5>
-                    <ul className="achievements-list">
-                      <li>Mastered Laravel MVC architecture and best practices</li>
-                      <li>Developed expertise in database design and optimization</li>
-                      <li>Gained experience in payment gateway integrations</li>
-                      <li>Built responsive and user-friendly web interfaces</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker">
-                <div className="marker-dot"></div>
-              </div>
-              <div className="timeline-content">
-                <div className="experience-card">
-                  <div className="experience-header">
-                    <div className="company-info">
-                      <h3 className="company-name">Freelance Projects</h3>
-                      <p className="company-location">Remote</p>
-                    </div>
-                    <div className="experience-duration">
-                      <span className="duration">2021 - 2022</span>
-                      <span className="duration-badge">1 year</span>
-                    </div>
-                  </div>
-                  <div className="role-info">
-                    <h4 className="job-title">Full Stack Developer</h4>
-                    <p className="job-description">
-                      Worked on various freelance projects, developing custom web solutions 
-                      for clients across different industries. Managed projects independently 
-                      from requirements gathering to deployment.
-                    </p>
-                  </div>
-                  <div className="projects-worked">
-                    <h5 className="projects-title">Key Projects:</h5>
-                    <div className="project-list">
-                      <div className="project-item">
-                        <span className="project-name">Restaurant Management System</span>
-                        <span className="project-tech">PHP, MySQL, HTML/CSS</span>
-                      </div>
-                      <div className="project-item">
-                        <span className="project-name">Real Estate Website</span>
-                        <span className="project-tech">PHP, JavaScript, Bootstrap</span>
-                      </div>
-                      <div className="project-item">
-                        <span className="project-name">Task Management App</span>
-                        <span className="project-tech">PHP, AJAX, jQuery</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="achievements">
-                    <h5 className="achievements-title">Key Achievements:</h5>
-                    <ul className="achievements-list">
-                      <li>Completed 10+ successful freelance projects</li>
-                      <li>Maintained 100% client satisfaction rate</li>
-                      <li>Developed expertise in multiple technologies</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
 
           {/* Experience Summary */}
           {/* <div className="experience-summary">
@@ -637,8 +606,8 @@ function App() {
                     </div>
                   </div>
                   <div className="skill-details">
-                    <span className="skill-experience">1.5+ years</span>
-                    <span className="skill-projects">12+ projects</span>
+                    <span className="skill-experience">2+ years</span>
+                    <span className="skill-projects">10+ projects</span>
                   </div>
                 </div>
                 
@@ -730,8 +699,8 @@ function App() {
                     </div>
                   </div>
                   <div className="skill-details">
-                    <span className="skill-experience">1.5+ years</span>
-                    <span className="skill-projects">18+ projects</span>
+                    <span className="skill-experience">2+ years</span>
+                    <span className="skill-projects">12+ projects</span>
                   </div>
                 </div>
                 
@@ -811,29 +780,10 @@ function App() {
                 
                 <div className="skill-item">
                   <div className="skill-header">
-                    <div className="skill-icon">🐳</div>
-                    <div className="skill-info">
-                      <span className="skill-name">Docker</span>
-                      <span className="skill-level">70%</span>
-                    </div>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{width: '70%'}}>
-                      <div className="progress-glow"></div>
-                    </div>
-                  </div>
-                  <div className="skill-details">
-                    <span className="skill-experience">1+ year</span>
-                    <span className="skill-projects">10+ containers</span>
-                  </div>
-                </div>
-                
-                <div className="skill-item">
-                  <div className="skill-header">
                     <div className="skill-icon">☁️</div>
                     <div className="skill-info">
                       <span className="skill-name">AWS</span>
-                      <span className="skill-level">65%</span>
+                      <span className="skill-level">10%</span>
                     </div>
                   </div>
                   <div className="skill-bar">
@@ -968,28 +918,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project-card">
-              <div className="project-header">
-                <div className="project-icon">🔗</div>
-                <div className="project-links">
-                  <a href="#" className="project-link">Live Demo</a>
-                  <a href="#" className="project-link">GitHub</a>
-                </div>
-              </div>
-              <div className="project-content">
-                <h3>API Gateway</h3>
-                <p>
-                  A microservices API gateway with authentication, rate limiting, 
-                  request/response transformation, monitoring, and load balancing.
-                </p>
-                <div className="project-tech">
-                  <span className="tech-tag">PHP</span>
-                  <span className="tech-tag">Docker</span>
-                  <span className="tech-tag">Redis</span>
-                  <span className="tech-tag">Nginx</span>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -1053,27 +982,57 @@ function App() {
               </div>
             </div>
             <div className="contact-form">
-              <form>
+              <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
                   <label>Your Name</label>
-                  <input type="text" placeholder="John Doe" required />
+                  <input
+                    type="text"
+                    name="name" 
+                    placeholder="John Doe"
+                    value={form.name}
+                    onChange={handleFormChange}
+                    required
+                  />
                 </div>
                 <div className="form-group">
                   <label>Your Email</label>
-                  <input type="email" placeholder="john@example.com" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    value={form.email}
+                    onChange={handleFormChange}
+                    required
+                  />
                 </div>
                 <div className="form-group">
                   <label>Subject</label>
-                  <input type="text" placeholder="Project Discussion" required />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Project Discussion"
+                    value={form.subject}
+                    onChange={handleFormChange}
+                    required
+                  />
                 </div>
                 <div className="form-group">
                   <label>Message</label>
-                  <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
+                  <textarea
+                    name="message"
+                    placeholder="Tell me about your project..."
+                    rows="5"
+                    value={form.message}
+                    onChange={handleFormChange}
+                    required
+                  ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary" disabled={sending}>
                   <span className="btn-icon">📤</span>
-                  <span>Send Message</span>
+                  <span>{sending ? 'Sending...' : 'Send Message'}</span>
                 </button>
+                {error && <div className="error-message">{error}</div>}
+                {sent && <div className="success-message">Message sent successfully! Thank you for reaching out.</div>}
               </form>
             </div>
           </div>
